@@ -14,7 +14,6 @@ export function CartItem({id, quantity}: CartItemProps) {
     const item = storeItems.find(item => item.id === id)
     if (item == null) return null;
 
-
     return (
         <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
             <img

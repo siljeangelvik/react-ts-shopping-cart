@@ -1,4 +1,4 @@
-import {Col, Nav, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {Key, useState} from "react";
 import {StoreItem} from "../components/StoreItem";
 import {useApiGet} from "../hooks/useApiGet";
@@ -6,10 +6,12 @@ import {API_URL} from "../utilities/constants";
 
 export function Home() {
 
-    const { data, loading } = useApiGet(API_URL); // use the useApiGet hook to fetch data from the API
+    const {data, loading} = useApiGet(API_URL); // use the useApiGet hook to fetch data from the API
     const [searchInput, setSearchInput] = useState(''); // create a state variable to store the search input
 
-    if (loading) {return <p>Loading...</p>;}
+    if (loading) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <>
@@ -34,5 +36,3 @@ export function Home() {
         </>
     )
 }
-
-// <Col>{JSON.stringify(item)}</Col>

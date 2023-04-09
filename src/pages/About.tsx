@@ -1,4 +1,4 @@
-import  {Col, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {useApiGet} from "../hooks/useApiGet";
 import {useParams} from "react-router-dom";
 import {API_URL} from "../utilities/constants";
@@ -6,8 +6,8 @@ import {formatCurrency} from "../utilities/formatCurrency";
 
 export function About() {
 
-    const { id } = useParams<{ id: string }>(); // get the id from the url
-   const {data} = useApiGet(API_URL + id); // use the useApiGet hook to fetch data from the API
+    const {id} = useParams<{ id: string }>(); // get the id from the url
+    const {data} = useApiGet(API_URL + id); // use the useApiGet hook to fetch data from the API
 
     return (
         <>
@@ -24,7 +24,7 @@ export function About() {
                             <p className="text-success">Sale!</p>
                         </div>
                         }
-                   </h3>
+                    </h3>
                 </div>
             </Row>
 
@@ -73,7 +73,4 @@ export function About() {
             </Row>
         </>
     )
-
 }
-
-// <Col>{JSON.stringify(item)}</Col>

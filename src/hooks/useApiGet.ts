@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 
 export type TApiResponse = {
     status: Number;
@@ -33,6 +33,5 @@ export const useApiGet = (url: string): TApiResponse => {
         getAPIData();
     }, []);
 
-    return { status, statusText, data, error, loading };
+    return {status, statusText, data, error, loading};
 };
-
