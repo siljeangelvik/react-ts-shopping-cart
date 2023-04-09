@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "iPhone 7",
+    "imageUrl": "https://www.elkjop.no/image/dv_web_D180001002838550/361941/iphone-13-5g-smarttelefon-128gb-rosa--pdp_zoom-3000--pdp_main-540.jpg",
+    "description": "The iPhone 7 comes in 32GB, 128GB, and 256GB. Prices start at $649.",
+    "price": 649,
+    "discountedPrice": null
+  },
+  {
+    "id": 2,
+    "title": "iPhone 7 Plus",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2951/3150/products/iphone-12max-graphite.jpg?v=1669994559",
+    "description": "The iPhone 7 Plus comes in 32GB, 128GB, and 256GB. Prices start at $769.",
+    "price": 769,
+    "discountedPrice": 699
+  },
+  {
+    "id": 3,
+    "title": "iPhone 6s",
+    "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_932957-MLA47782545553_102021-V.webp",
+    "description": "The iPhone 6s comes in 32GB, 128GB, and 256GB. Prices start at $549.",
+    "price": 549,
+    "discountedPrice": 499
+  },
+  {
+    "id": 4,
+    "title": "iPhone 6s Plus",
+    "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1660753617539",
+    "description": "The iPhone 6s Plus comes in 32GB, 128GB, and 256GB. Prices start at $669.",
+    "price": 669,
+    "discountedPrice": null
+  }
+]
