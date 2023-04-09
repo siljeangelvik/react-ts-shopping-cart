@@ -9,6 +9,8 @@ export function About() {
     const {id} = useParams<{ id: string }>(); // get the id from the url
     const {data} = useApiGet(API_URL + id); // use the useApiGet hook to fetch data from the API
 
+    // @ts-ignore
+    // @ts-ignore
     return (
         <>
             <h1>About</h1>
@@ -59,12 +61,17 @@ export function About() {
 
                                 <div>
                                     <h5>Rating:</h5>
-                                    <p>{review.rating}</p>
+                                    <div className="d-flex justify-content-start align-items-baseline h-25">
+                                        <span className="material-symbols-outlined">
+                                            star
+                                        </span>
+                                        <strong>{review.rating}</strong>
+                                    </div>
                                 </div>
 
                                 <div>
                                     <h5>Comment:</h5>
-                                    <p style={{maxWidth: "20ch"}}>{review.decription}</p>
+                                    <p style={{maxWidth: "20ch"}}>{review?.description}</p>
                                 </div>
                             </div>
                         </Col>

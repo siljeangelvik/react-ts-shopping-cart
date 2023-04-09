@@ -12,7 +12,7 @@ type StoreItemProps = {
     discountedPrice?: number; // Make discountedPrice optional
 };
 
-export function StoreItem({id, title, imageUrl, price, discountedPrice}: StoreItemProps) {
+export function StoreItem({id, title, imageUrl, price, description, discountedPrice}: StoreItemProps) {
 
     const {
         getItemQuantity,
@@ -26,14 +26,17 @@ export function StoreItem({id, title, imageUrl, price, discountedPrice}: StoreIt
         <Card className="h-100">
             <Card.Img variant="top" src={imageUrl} height="200px" style={{objectFit: "cover"}}/>
             <Card.Body className="d-flex flex-column">
-                <Card.Title className="d-flex justify-content space-between align-items-baseline">
-                    <span className="fs-2">{title}</span>
-                    <span className="fs-2 text-muted d-flex flex-column">
+                <Card.Title className="d-flex justify-content space-between align-items-baseline w-100">
+                    <span className="fs-2 w-60">{title}</span>
+                    <span className="fs-3 text-muted d-flex flex-column">
                         {discountedPrice && <del>{formatCurrency(price)}</del>}
                         {formatCurrency(discountedPrice || price)}
                         {discountedPrice && <span></span>}
                     </span>
                 </Card.Title>
+                <Card.Subtitle>
+                    <span>{description}</span>
+                </Card.Subtitle>
                 <div className="mt-auto">
                     {quantity === 0 ? (
                         <div className="d-flex" style={{gap: ".5rem"}}>
