@@ -26,15 +26,15 @@ export function StoreItem({id, title, imageUrl, price, description, discountedPr
         <Card className="h-100">
             <Card.Img variant="top" src={imageUrl} height="200px" style={{objectFit: "cover"}}/>
             <Card.Body className="d-flex flex-column">
-                <Card.Title className="d-flex justify-content space-between align-items-baseline w-100">
-                    <span className="fs-2 w-60">{title}</span>
-                    <span className="fs-3 text-muted d-flex flex-column">
+                <Card.Title className="d-flex justify-content-between align-items-baseline" style={{gap: "20px"}}>
+                    <span className="fs-3">{title}</span>
+                    <span className="fs-4 text-muted d-flex flex-column">
                         {discountedPrice && <del>{formatCurrency(price)}</del>}
                         {formatCurrency(discountedPrice || price)}
-                        {discountedPrice && <span></span>}
+                        {discountedPrice && <span className="text-success">Sale!</span>}
                     </span>
                 </Card.Title>
-                <Card.Subtitle>
+                <Card.Subtitle className="pb-3" style={{maxWidth: "35ch"}}>
                     <span>{description}</span>
                 </Card.Subtitle>
                 <div className="mt-auto">

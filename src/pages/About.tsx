@@ -9,8 +9,6 @@ export function About() {
     const {id} = useParams<{ id: string }>(); // get the id from the url
     const {data} = useApiGet(API_URL + id); // use the useApiGet hook to fetch data from the API
 
-    // @ts-ignore
-    // @ts-ignore
     return (
         <>
             <h1>About</h1>
@@ -49,7 +47,8 @@ export function About() {
                     {data?.reviews.map((review: {
                         username: any;
                         rating: any;
-                        decription: any;
+                        // @ts-ignore
+                        description: comment;
                         id: string | number | null | undefined;
                     }) => (
                         <Col key={review.id}>
@@ -71,7 +70,7 @@ export function About() {
 
                                 <div>
                                     <h5>Comment:</h5>
-                                    <p style={{maxWidth: "20ch"}}>{review?.description}</p>
+                                    <p style={{maxWidth: "20ch"}}>{review.description}</p>
                                 </div>
                             </div>
                         </Col>
