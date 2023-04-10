@@ -1,4 +1,4 @@
-### React TS Shopping Cart
+# React TS Shopping Cart
 
 Netlify: [react-ts-ecom](https://react-ts-ecom-cart.netlify.app/)  
 GitHub: [Repo](https://github.com/WebDevSimplified/react-ts-shopping-cart)  
@@ -10,9 +10,11 @@ API: [online-shop](https://api.noroff.dev/api/v1/online-shop)
 To apply knowledge of React to build an eCom store.
 
 ### Brief
-The API you are using for this brief is: https://api.noroff.dev/api/v1/online-shop
+The API you are using for this brief is:   
+https://api.noroff.dev/api/v1/online-shop
 
-You can find individual items by appending a product ID at the end of the API URL e.g. https://api.noroff.dev/api/v1/online-shop/f99cafd2-bd40-4694-8b33-a6052f36b435
+You can find individual items by appending a product ID at the end of the API URL e.g.   
+https://api.noroff.dev/api/v1/online-shop/f99cafd2-bd40-4694-8b33-a6052f36b435
 
 You are tasked with build out the following pages for an eCom store:
 * Homepage 
@@ -20,9 +22,13 @@ You are tasked with build out the following pages for an eCom store:
 * Cart page 
 * Checkout success page
 
-~~The Homepage should have a list of all the products. There should be a look-ahead search bar that filters products when typing in a product name. Clicking on a product should take a user to an individual product page.~~
+~~The Homepage should have a list of all the products.   
+There should be a look-ahead search bar that filters products when typing in a product name.   
+Clicking on a product should take a user to an individual product page.~~
 
-~~Your pages should use a <Layout> component that contains a header and footer. The header should contain a nav bar as well as a Cart icon component that acts as a button as well as displays the current number of items in the cart.~~
+~~Your pages should use a <Layout> component that contains a header and footer.   
+The header should contain a nav bar as well as a Cart icon component that   
+acts as a button as well as displays the current number of items in the cart.~~
 
 ~~The individual product page should display data for a single product.~~   
 ~~There should be an `Add to cart` button which, upon clicking, adds the product to the cart.~~   
@@ -33,7 +39,8 @@ You are tasked with build out the following pages for an eCom store:
 ~~If there is a difference between the `discountedPrice` and `price` properties then that means   
 there is a discount for that product. Calculate what this discount is and display it on the page.~~
 
-~~Clicking on the Cart icon will load the Cart page, which will list all of the products as well as a total.~~   
+~~Clicking on the Cart icon will load the Cart page,   
+which will list all of the products as well as a total.~~   
 ~~The Cart page will have a Checkout button.~~   
 ~~Clicking this Checkout button then goes to a Checkout success page.~~
 
@@ -51,7 +58,8 @@ There must be form validation:~~
 
 ~~You will be using React Router to switch between pages.~~
 
-~~Your design should be responsive. You are welcome to use a CSS Framework, however, you’re encouraged to design from scratch and use styled-components or CSS Modules.~~
+~~Your design should be responsive. You are welcome to use a CSS Framework, however,   
+you’re encouraged to design from scratch and use styled-components or CSS Modules.~~
 
 You are not required to use TypeScript.
 
@@ -71,10 +79,10 @@ You are not required to use TypeScript.
 
 Create the other pages:
  
-6.1 ~~ContactPage~~
-6.2 ~~ProductPage~~
-6.3 ~~CheckoutPage~~
-6.4 ~~CheckoutSuccessPage~~
+6.1 ~~ContactPage~~  
+6.2 ~~ProductPage~~  
+6.3 ~~CheckoutPage~~  
+6.4 ~~CheckoutSuccessPage~~  
  
 ~~Add React Router and route to each of the pages.~~    
 The ProductPage page will be using a dynamic segment.   
@@ -102,11 +110,11 @@ The homepage should have a lookahead/auto-complete Search bar component.
  
 ~~On the ContactPage, create the following inputs with the following requirements.~~
  
-16.1 ~~Full name (Minimum number of characters is 3, required)~~
-16.2 ~~Subject (Minimum number of characters is 3, required)~~
-16.3 ~~Email (Must be a valid email address, required)~~
-16.4 ~~Body (Minimum number of characters is 3, required)~~
-16.5 ~~Submit button~~ 
+16.1 ~~Full name (Minimum number of characters is 3, required)~~  
+16.2 ~~Subject (Minimum number of characters is 3, required)~~  
+16.3 ~~Email (Must be a valid email address, required)~~  
+16.4 ~~Body (Minimum number of characters is 3, required)~~  
+16.5 ~~Submit button~~   
 ~~console.log the data from the form once validation requirements are met.~~ 
 
 Once your project is done, deploy it to Netlify.
