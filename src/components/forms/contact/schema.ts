@@ -19,4 +19,3 @@ export const validationSchema = yup.object({
         .required('* Please enter your subject'),
 });
 
-export type ValidationSchemaType = yup.InferType<typeof validationSchema>;
