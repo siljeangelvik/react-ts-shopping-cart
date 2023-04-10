@@ -51,7 +51,7 @@ export function StoreItem({id, title, imageUrl, price, description, discountedPr
                         <div className="d-flex" style={{gap: ".5rem"}}>
                             <Button className="w-50">
                                 <Nav.Link as={NavLink} to={`/about/${id}`}>
-                                    Read More
+                                    View Product
                                 </Nav.Link>
                             </Button>
 
