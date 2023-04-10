@@ -1,13 +1,15 @@
-import {Col, Row} from "react-bootstrap";
+import {Button, Col, Row} from "react-bootstrap";
 import {useApiGet} from "../hooks/useApiGet";
 import {useParams} from "react-router-dom";
 import {API_URL} from "../utilities/constants";
 import {formatCurrency} from "../utilities/formatCurrency";
+import {useShoppingCart} from "../context/ShoppingCartContext";
 
 export function About() {
 
     const {id} = useParams<{ id: string }>(); // get the id from the url
     const {data} = useApiGet(API_URL + id); // use the useApiGet hook to fetch data from the API
+    const {increaseCartQuantity} = useShoppingCart();
 
     return (
         <>
@@ -33,7 +35,7 @@ export function About() {
                 </div>
             </Row>
 
-            <Row md={2} xs={1} lg={3} className="g-3 me-auto d-flex flex-column">
+            <Row md={2} xs={1} lg={3} className="g-3 me-auto d-flex flex-column pb-5">
                 <img
                     src={data?.imageUrl}
                     alt={data?.title}
@@ -42,6 +44,10 @@ export function About() {
                 />
                 <h4>Description: </h4>
                 <p>{data?.description}</p>
+
+                <Button className="" onClick={() => increaseCartQuantity(data?.id)}>
+                    + Add to Cart
+                </Button>
             </Row>
 
             <h2>Reviews</h2>

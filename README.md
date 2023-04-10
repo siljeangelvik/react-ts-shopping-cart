@@ -3,8 +3,37 @@
 Netlify: [react-ts-ecom](https://react-ts-ecom-cart.netlify.app/)  
 GitHub: [Repo](https://github.com/siljeangelvik/react-ts-shopping-cart)  
 API: [online-shop](https://api.noroff.dev/api/v1/online-shop)  
+Brief: [course assignment](https://content.noroff.dev/front-end-frameworks/ca.html)
 
 TypeScript, React, React Router, Styled Components, Bootstrap  
+
+---
+
+## Resources 
+
+Not all resources have been used, but I have included them here for future reference.  
+
+**Reads:**  
+[Tanstack](https://tanstack.com/query/v4/docs/react/quick-start)  
+[Redux Toolkit Setup Tutorial](https://dev.to/raaynaldo/redux-toolkit-setup-tutorial-5fjf)  
+[RTK Query Quick Start](https://redux-toolkit.js.org/tutorials/rtk-query)  
+[Redux Configuring Your Store](https://redux.js.org/usage/configuring-your-store)  
+[Clear Redux Toolkit State using Redux-Persist](https://bionicjulia.com/blog/clear-redux-toolkit-state-with-redux-persist-and-typescript)  
+[Use Redux Persist in React Native](https://blog.logrocket.com/use-redux-persist-react-native/)  
+[useSelector and useDispatch React-Redux Hooks](https://builtin.com/software-engineering-perspectives/useselector-usedispatch-react-redux)  
+
+
+
+**Videos:**  
+[Custom React Hooks](https://www.youtube.com/watch?v=0c6znExIqRw&list=PLZlA0Gpn_vH-aEDXnaFNLsqiJWFpIWV03)  
+[Custom React Hooks 2](https://www.youtube.com/watch?v=vrIxu-kfAUo)  
+[React Query](https://www.youtube.com/watch?v=lVLz_ASqAio)  
+[useEffect in 13 minutes](https://www.youtube.com/watch?v=0ZJgIjIuY7U)  
+[Shopping Cart with React and TypeScript](https://www.youtube.com/watch?v=lATafp15HWA)
+
+**Practical Examples:**  
+[Redux Toolkit Cart Demo](https://codesandbox.io/embed/redux-toolkit-cart-demo-forked-fkb5d?codemirror=1)  
+
 
 ---
 
