@@ -28,6 +28,7 @@ You are tasked with build out the following pages for an eCom store:
 ~~There should be an `Add to cart` button which, upon clicking, adds the product to the cart.~~   
 ~~The product page should display the title of the product, the description and the image.~~   
 ~~There should also be reviews listed for the product, if there are any.~~   
+
 You should use the `discountedPrice` property to display the price of the product.   
 If there is a difference between the `discountedPrice` and `price` properties then that means   
 there is a discount for that product. Calculate what this discount is and display it on the page.

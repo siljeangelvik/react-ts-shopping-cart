@@ -5,7 +5,7 @@ import {API_URL} from "../utilities/constants";
 
 export function Store() {
 
-    const { data, loading } = useApiGet(API_URL); // use the useApiGet hook to fetch data from the API
+    const { data, loading } = useApiGet(API_URL);
     if (loading) {return <p>Loading...</p>;}
 
     return (

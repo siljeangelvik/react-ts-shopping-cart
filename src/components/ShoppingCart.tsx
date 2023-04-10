@@ -2,7 +2,8 @@ import {Offcanvas, Stack} from "react-bootstrap";
 import {useShoppingCart} from "../context/ShoppingCartContext";
 import {CartItem} from "./CartItem";
 import {formatCurrency} from "../utilities/formatCurrency";
-import storeItems from "../data/items.json";
+import {useApiGet} from "../hooks/useApiGet";
+import {API_URL} from "../utilities/constants";
 
 type ShoppingCartProps = {
     isOpen: boolean;
@@ -11,6 +12,7 @@ type ShoppingCartProps = {
 export function ShoppingCart({isOpen}: ShoppingCartProps) {
 
     const {closeCart, cartItems} = useShoppingCart();
+    const items = useApiGet(API_URL);
 
     return (
         <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -24,7 +26,7 @@ export function ShoppingCart({isOpen}: ShoppingCartProps) {
                     ))}
                     <div className="ms-auto fw-bold fs-5">
                         Total {formatCurrency(cartItems.reduce((total, cartItem) => {
-                            const item = storeItems.find(i => i.id === cartItem.id)
+                            const item = items.data?.find((i: { id: number; }) => i.id === cartItem.id)
                             return total + (item?.price || 0) * cartItem.quantity
                         }, 0)
                     )}

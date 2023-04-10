@@ -1,7 +1,8 @@
 import {useShoppingCart} from "../context/ShoppingCartContext";
-import storeItems from "../data/items.json";
 import {Button, Stack} from "react-bootstrap";
 import {formatCurrency} from "../utilities/formatCurrency";
+import {useApiGet} from "../hooks/useApiGet";
+import {API_URL} from "../utilities/constants";
 
 type CartItemProps = {
     id: number;
@@ -10,8 +11,11 @@ type CartItemProps = {
 
 export function CartItem({id, quantity}: CartItemProps) {
 
+
+    const itemFound = useApiGet(API_URL + id);
+    const item = itemFound.data;
     const {removeFromCart} = useShoppingCart();
-    const item = storeItems.find(item => item.id === id)
+    //  const item = storeItems.find(item => item.id === id)
     if (item == null) return null;
 
     return (
