@@ -11,26 +11,32 @@ export function About() {
     const {data} = useApiGet(API_URL + id); // use the useApiGet hook to fetch data from the API
     const {increaseCartQuantity} = useShoppingCart();
 
+    const checkPrice = () => {
+
+        const discount = data?.discountedPrice !== null ? data?.discountedPrice : data?.price;
+
+        if (discount) {
+            return (
+                <span className="fs-3 d-flex flex-column">
+                    <del>{formatCurrency(data?.price)}</del>
+                    <span className="text-muted">{formatCurrency(discount)}</span>
+                    <span className="text-success">
+                        {`Save ${formatCurrency(data?.price - data?.discountedPrice)} 
+                        (${Math.round(((data?.price - data?.discountedPrice) / data?.price) * 100)} % off)`}
+                    </span>
+                </span>
+            );
+        }
+    }
+
     return (
         <>
-            <h1>About</h1>
+            <h1>{data?.title}</h1>
 
             <Row md={2} xs={1} lg={3} className="g-3 me-auto">
                 <div style={{display: "flex", flexWrap: "wrap", gap: "25px"}}>
-                    <h2>{data?.title}</h2>
                     <h3 className="fs-2">
-                        {data?.discountedPrice && (
-                            <span className="fs-6 text-muted d-flex flex-column">
-                                {data?.price !== data?.discountedPrice && <del>{formatCurrency(data?.price)}</del>}
-                                {formatCurrency(data?.discountedPrice)}
-                                {data?.price !== data?.discountedPrice && (
-                                    <span className="text-success">
-                                        {`Save ${formatCurrency(data?.price - data?.discountedPrice)} (${Math.round(((data?.price - data?.discountedPrice) / data?.price) * 100)}% off)`}
-                                    </span>
-                                )}
-                            </span>
-                        )}
-                        {!data?.discountedPrice && formatCurrency(data?.price)}
+                        <span className="fs-3 d-flex flex-column">{checkPrice()}</span>
                     </h3>
                 </div>
             </Row>
