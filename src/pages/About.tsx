@@ -13,14 +13,18 @@ export function About() {
 
     const checkPrice = () => {
 
-        const discount = data?.discountedPrice !== null ? data?.discountedPrice : data?.price;
-
-        if (discount) {
+        if (data?.discountedPrice === data?.price) {
             return (
-                <span className="fs-3 d-flex flex-column">
-                    <del>{formatCurrency(data?.price)}</del>
-                    <span className="text-muted">{formatCurrency(discount)}</span>
-                    <span className="text-success">
+                <span className="d-flex flex-column">
+                    {formatCurrency(data?.discountedPrice)}
+                </span>
+            );
+        } else {
+            return (
+                <span className="d-flex flex-column">
+                    <del className="fs-4">{formatCurrency(data?.price)}</del>
+                    <span className="fs-3 text-muted">{formatCurrency(data?.discountedPrice)}</span>
+                    <span className="fs-3 text-success">
                         {`Save ${formatCurrency(data?.price - data?.discountedPrice)} 
                         (${Math.round(((data?.price - data?.discountedPrice) / data?.price) * 100)} % off)`}
                     </span>
