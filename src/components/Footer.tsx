@@ -1,11 +1,12 @@
-import {Container} from "react-bootstrap";
 import "../styles.css";
 
 export function Footer() {
 
     return (
-        <Container style={{width: "100%", background: "#3B71CA"}}>
-            <p style={{color: "white"}}>made by johndoe</p>
-        </Container>
+            <footer
+                className="bg-white shadow-md mt-3 d-flex justify-content-center align-items-center"
+                style={{width: "100%", position:"fixed", bottom: 0, right: 0 }}>
+                <p>made by @johndoe</p>
+            </footer>
     )
 }

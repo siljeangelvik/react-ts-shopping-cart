@@ -33,7 +33,8 @@ You should use the `discountedPrice` property to display the price of the produc
 If there is a difference between the `discountedPrice` and `price` properties then that means   
 there is a discount for that product. Calculate what this discount is and display it on the page.
 
-Clicking on the Cart icon will load the Cart page, which will list all of the products as well as a total. The Cart page will have a Checkout button. Clicking this Checkout button then goes to a Checkout success page.
+~~Clicking on the Cart icon will load the Cart page, which will list all of the products as well as a total.~~   
+The Cart page will have a Checkout button. Clicking this Checkout button then goes to a Checkout success page.
 
 The Checkout success page will display a message to the user notifying them that their order was successful. There should also be a link that lets a user go back to the store. The cart must be cleared if the user gets to the Checkout success page.
 

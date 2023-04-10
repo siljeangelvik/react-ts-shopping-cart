@@ -28,10 +28,19 @@ export function StoreItem({id, title, imageUrl, price, description, discountedPr
             <Card.Body className="d-flex flex-column">
                 <Card.Title className="d-flex justify-content-between align-items-baseline" style={{gap: "20px"}}>
                     <span className="fs-3">{title}</span>
-                    <span className="fs-4 text-muted d-flex flex-column">
-                        {discountedPrice && <del>{formatCurrency(price)}</del>}
-                        {formatCurrency(discountedPrice || price)}
-                        {discountedPrice && <span className="text-success">Sale!</span>}
+                    <span className="fs-4">
+                        {discountedPrice && (
+                            <span className="fs-6 text-muted d-flex flex-column">
+                                {price !== discountedPrice && <del>{formatCurrency(price)}</del>}
+                                {formatCurrency(discountedPrice)}
+                                {price !== discountedPrice && (
+                                    <span className="text-success">
+                                        {`Save ${formatCurrency(price - discountedPrice)} (${Math.round(((price - discountedPrice) / price) * 100)}% off)`}
+                                    </span>
+                                )}
+                            </span>
+                        )}
+                        {!discountedPrice && formatCurrency(price)}
                     </span>
                 </Card.Title>
                 <Card.Subtitle className="pb-3" style={{maxWidth: "35ch"}}>

@@ -16,20 +16,25 @@ export function About() {
             <Row md={2} xs={1} lg={3} className="g-3 me-auto">
                 <div style={{display: "flex", flexWrap: "wrap", gap: "25px"}}>
                     <h2>{data?.title}</h2>
-
-                    <h3 className="fs-2 text-muted d-flex flex-column">
-                        {data?.discountedPrice && <div>
-                            <del>{formatCurrency(data?.price)}</del>
-                            <p className="text-success">{formatCurrency(data?.discountedPrice)}</p>
-                            <p className="text-success">Sale!</p>
-                        </div>
-                        }
+                    <h3 className="fs-2">
+                        {data?.discountedPrice && (
+                            <span className="fs-6 text-muted d-flex flex-column">
+                                {data?.price !== data?.discountedPrice && <del>{formatCurrency(data?.price)}</del>}
+                                {formatCurrency(data?.discountedPrice)}
+                                {data?.price !== data?.discountedPrice && (
+                                    <span className="text-success">
+                                        {`Save ${formatCurrency(data?.price - data?.discountedPrice)} (${Math.round(((data?.price - data?.discountedPrice) / data?.price) * 100)}% off)`}
+                                    </span>
+                                )}
+                            </span>
+                        )}
+                        {!data?.discountedPrice && formatCurrency(data?.price)}
                     </h3>
                 </div>
             </Row>
 
 
-            <Row md={2} xs={1} lg={3} className="g-3 me-auto">
+            <Row md={2} xs={1} lg={3} className="g-3 me-auto d-flex flex-column">
                 <img
                     src={data?.imageUrl}
                     alt={data?.title}
