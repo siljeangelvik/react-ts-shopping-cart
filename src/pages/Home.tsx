@@ -16,7 +16,6 @@ export function Home() {
     return (
         <>
             <h1>Home</h1>
-
             <input
                 type="text"
                 placeholder="Search..."
@@ -24,7 +23,6 @@ export function Home() {
                 style={{marginBottom: '2rem'}}
                 onChange={e => setSearchInput(e.target.value)}
             />
-
             <Row md={2} xs={1} lg={3} className="g-3">
                 {data?.filter((item: { title: string }) => item.title.toLowerCase().includes(searchInput.toLowerCase()))
                     .map((item: { id: Key | null | undefined; }) => (

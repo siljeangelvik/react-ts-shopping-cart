@@ -11,11 +11,9 @@ type CartItemProps = {
 
 export function CartItem({id, quantity}: CartItemProps) {
 
-
     const itemFound = useApiGet(API_URL + id);
     const item = itemFound.data;
     const {removeFromCart} = useShoppingCart();
-    //  const item = storeItems.find(item => item.id === id)
     if (item == null) return null;
 
     return (

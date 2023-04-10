@@ -33,7 +33,6 @@ export function About() {
                 </div>
             </Row>
 
-
             <Row md={2} xs={1} lg={3} className="g-3 me-auto d-flex flex-column">
                 <img
                     src={data?.imageUrl}
@@ -41,7 +40,6 @@ export function About() {
                     height="200px"
                     style={{objectFit: "cover"}}
                 />
-
                 <h4>Description: </h4>
                 <p>{data?.description}</p>
             </Row>

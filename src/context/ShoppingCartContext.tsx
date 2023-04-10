@@ -1,6 +1,7 @@
 import {createContext, ReactNode, useContext, useState} from 'react';
 import {ShoppingCart} from "../components/ShoppingCart";
 import {useLocalStorage} from "../hooks/useLocalStorage";
+import {CheckoutSuccess} from "../pages/Checkout";
 
 type ShoppingCartProviderProps = {
     children: ReactNode;
@@ -19,6 +20,7 @@ type ShoppingCartContext = {
     decreaseCartQuantity: (id: number) => void;
     removeFromCart: (id: number) => void;
     cartQuantity: number;
+    clearCartAndLocalStorage: () => void;
     cartItems: CartItem[];
 }
 
@@ -89,6 +91,15 @@ export function ShoppingCartProvider({children}: ShoppingCartProviderProps) {
         })
     }
 
+    function clearCartAndLocalStorage() {
+        localStorage.removeItem("shopping-cart");
+        setCartItems([]);
+        setIsOpen(false);
+        return (
+            <CheckoutSuccess/>
+        );
+    }
+
     return (
         <ShoppingCartContext.Provider
             value={{
@@ -98,6 +109,7 @@ export function ShoppingCartProvider({children}: ShoppingCartProviderProps) {
                 removeFromCart,
                 openCart,
                 closeCart,
+                clearCartAndLocalStorage,
                 cartItems,
                 cartQuantity,
             }}>

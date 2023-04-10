@@ -5,7 +5,7 @@ export const validationSchema = yup.object({
         .string()
         .min(3, '* Your full name should be at least 3 characters.')
         .required('* Please enter your first name'),
-   email: yup
+    email: yup
         .string()
         .email('* Please enter a valid email')
         .required('* Please enter your email'),

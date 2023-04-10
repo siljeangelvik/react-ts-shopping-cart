@@ -37,7 +37,6 @@ export function ContactForm() {
                     ) : null}
                 </div>
 
-
                 <div className={"d-flex flex-column align-items-center justify-content-center"}>
                     <label htmlFor="email">Email Address</label>
                     <input

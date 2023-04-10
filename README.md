@@ -29,14 +29,16 @@ You are tasked with build out the following pages for an eCom store:
 ~~The product page should display the title of the product, the description and the image.~~   
 ~~There should also be reviews listed for the product, if there are any.~~   
 
-You should use the `discountedPrice` property to display the price of the product.   
-If there is a difference between the `discountedPrice` and `price` properties then that means   
-there is a discount for that product. Calculate what this discount is and display it on the page.
+~~You should use the `discountedPrice` property to display the price of the product.~~   
+~~If there is a difference between the `discountedPrice` and `price` properties then that means   
+there is a discount for that product. Calculate what this discount is and display it on the page.~~
 
 ~~Clicking on the Cart icon will load the Cart page, which will list all of the products as well as a total.~~   
 The Cart page will have a Checkout button. Clicking this Checkout button then goes to a Checkout success page.
 
-The Checkout success page will display a message to the user notifying them that their order was successful. There should also be a link that lets a user go back to the store. The cart must be cleared if the user gets to the Checkout success page.
+The Checkout success page will display a message to the user notifying them that their order was successful.   
+There should also be a link that lets a user go back to the store.   
+The cart must be cleared if the user gets to the Checkout success page.
 
 ~~There will be a contact page which will contain a contact form with the following fields. There must be form validation:~~
 * Full name (Minimum number of characters is 3, required)  

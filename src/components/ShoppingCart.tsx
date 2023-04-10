@@ -1,9 +1,10 @@
-import {Offcanvas, Stack} from "react-bootstrap";
+import {Button, Nav, Offcanvas, Stack} from "react-bootstrap";
 import {useShoppingCart} from "../context/ShoppingCartContext";
 import {CartItem} from "./CartItem";
 import {formatCurrency} from "../utilities/formatCurrency";
 import {useApiGet} from "../hooks/useApiGet";
 import {API_URL} from "../utilities/constants";
+import {NavLink} from "react-router-dom";
 
 type ShoppingCartProps = {
     isOpen: boolean;
@@ -11,7 +12,7 @@ type ShoppingCartProps = {
 
 export function ShoppingCart({isOpen}: ShoppingCartProps) {
 
-    const {closeCart, cartItems} = useShoppingCart();
+    const {closeCart, cartItems, clearCartAndLocalStorage} = useShoppingCart();
     const items = useApiGet(API_URL);
 
     return (
@@ -31,6 +32,18 @@ export function ShoppingCart({isOpen}: ShoppingCartProps) {
                         }, 0)
                     )}
                     </div>
+                </Stack>
+
+                <Stack gap={3} className="mt-3">
+                    <Nav.Link as={NavLink} to="/checkout">
+                        <Button variant="primary" className="w-100" onClick={clearCartAndLocalStorage}>
+                            Checkout
+                        </Button>
+                    </Nav.Link>
+
+                    <Button variant="secondary" className="w-100" onClick={closeCart}>
+                        Continue Shopping
+                    </Button>
                 </Stack>
             </Offcanvas.Body>
         </Offcanvas>
