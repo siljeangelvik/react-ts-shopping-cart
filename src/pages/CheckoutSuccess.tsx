@@ -8,7 +8,7 @@ export function CheckoutSuccess() {
 
     useEffect(() => {
         clearCartAndLocalStorage(); // Clear the cart on mount
-    }, [clearCartAndLocalStorage]);
+    }, []);
 
     return (
         <div>

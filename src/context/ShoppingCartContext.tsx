@@ -1,7 +1,6 @@
 import {createContext, ReactNode, useContext, useState} from 'react';
 import {ShoppingCart} from "../components/ShoppingCart";
 import {useLocalStorage} from "../hooks/useLocalStorage";
-import {CheckoutSuccess} from "../pages/Checkout";
 
 type ShoppingCartProviderProps = {
     children: ReactNode;
@@ -95,9 +94,6 @@ export function ShoppingCartProvider({children}: ShoppingCartProviderProps) {
         localStorage.removeItem("shopping-cart");
         setCartItems([]);
         setIsOpen(false);
-        return (
-            <CheckoutSuccess/>
-        );
     }
 
     return (

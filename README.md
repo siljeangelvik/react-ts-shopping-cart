@@ -36,9 +36,9 @@ there is a discount for that product. Calculate what this discount is and displa
 ~~Clicking on the Cart icon will load the Cart page, which will list all of the products as well as a total.~~   
 The Cart page will have a Checkout button. Clicking this Checkout button then goes to a Checkout success page.
 
-The Checkout success page will display a message to the user notifying them that their order was successful.   
-There should also be a link that lets a user go back to the store.   
-The cart must be cleared if the user gets to the Checkout success page.
+~~The Checkout success page will display a message to the user notifying them that their order was successful.~~   
+~~There should also be a link that lets a user go back to the store.~~   
+~~The cart must be cleared if the user gets to the Checkout success page.~~
 
 ~~There will be a contact page which will contain a contact form with the following fields. There must be form validation:~~
 * Full name (Minimum number of characters is 3, required)  

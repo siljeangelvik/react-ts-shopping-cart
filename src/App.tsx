@@ -6,7 +6,7 @@ import {About} from './pages/About'
 import {Navbar} from './components/Navbar'
 import {ShoppingCartProvider} from "./context/ShoppingCartContext";
 import {Footer} from "./components/Footer";
-import {CheckoutSuccess} from "./pages/Checkout";
+import {CheckoutSuccess} from "./pages/CheckoutSuccess";
 
 function App() {
     return (
