@@ -38,6 +38,8 @@ export function ContactForm() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.fullName}
+                            placeholder={"Enter your full name"}
+                            style={{width:"300px", padding:"0.35rem", borderRadius:"0.25rem", border:"2px solid #ccc"}}
                         />
                         {formik.touched.fullName && formik.errors.fullName ? (
                             <p style={{color: "red"}}>{formik.errors.fullName}</p>
@@ -53,6 +55,8 @@ export function ContactForm() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.email}
+                            placeholder={"Enter your email address"}
+                            style={{width:"300px", padding:"0.35rem", borderRadius:"0.25rem", border:"2px solid #ccc"}}
                         />
                         {formik.touched.email && formik.errors.email ? (
                             <p style={{color: "red"}}>{formik.errors.email}</p>
@@ -68,6 +72,8 @@ export function ContactForm() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.subject}
+                            placeholder={"Title of your message"}
+                            style={{width:"300px", padding:"0.35rem", borderRadius:"0.25rem", border:"2px solid #ccc"}}
                         />
                         {formik.touched.subject && formik.errors.subject ? (
                             <p style={{color: "red"}}>{formik.errors.subject}</p>
@@ -82,6 +88,8 @@ export function ContactForm() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.formBody}
+                            placeholder={"You message here..."}
+                            style={{width:"300px", padding:"0.35rem", borderRadius:"0.25rem", border:"2px solid #ccc"}}
                         />
                         {formik.touched.formBody && formik.errors.formBody ? (
                             <p style={{color: "red"}}>{formik.errors.formBody}</p>

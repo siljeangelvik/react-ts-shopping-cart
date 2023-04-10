@@ -16,13 +16,16 @@ export function Home() {
 
     return (
         <>
-            <h1>Home</h1>
+            <h1>uShop</h1>
+
+            <p style={{marginBottom: '2rem', marginTop:"2rem"}}>There is currently {data?.length} listings</p>
+
             <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Search products..."
                 value={searchInput}
                 list={"dataList"}
-                style={{marginBottom: '2rem'}}
+                style={{marginBottom: '2rem', width:"300px", padding:"0.35rem", borderRadius:"0.25rem", border:"2px solid #ccc"}}
                 onChange={e => setSearchInput(e.target.value)}
             />
 
