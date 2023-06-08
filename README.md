@@ -1,160 +1,119 @@
-# React TS Shopping Cart
+# JavaScript Frameworks CA
 
-Netlify: [react-ts-ecom](https://react-ts-ecom-cart.netlify.app/)  
-GitHub: [Repo](https://github.com/siljeangelvik/react-ts-shopping-cart)  
-API: [online-shop](https://api.noroff.dev/api/v1/online-shop)  
-Brief: [course assignment](https://content.noroff.dev/front-end-frameworks/ca.html)
+**Student:** [Silje Angelvik](https://github.com/siljeangelvik)    
+**Host:** [Netlify](https://react-ts-ecom-cart.netlify.app/)   
+**Repository:** [GitHub](https://github.com/siljeangelvik/react-ts-shopping-cart)
 
-TypeScript, React, React Router, Styled Components, Bootstrap  
+| Resources | URLs                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|:----------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Noroff    | [Project Brief](https://lms.noroff.no/mod/assign/view.php?id=83441) - [API Endpoints](https://api.noroff.dev/api/v1/online-shop)                                                                                                                                                                                                                                                                                                                |                                                                                                                                                                                                                     |
 
----
+## uShop Online Shop
 
-## Resources 
+<img src="./public/media/javascript_frameworks_home.png" alt="uShop Home Page" width="482"> <br/>
+<img src="./public/media/javascript_frameworks_details.png" alt="uShop Details Page" width="240"> <img src="./public/media/javascript_frameworks_contact.png" alt="uShop Contact Page" width="240">
 
-Not all resources have been used, but I have included them here for future reference.  
+## Description
 
-**Reads:**  
-[Tanstack](https://tanstack.com/query/v4/docs/react/quick-start)  
-[Redux Toolkit Setup Tutorial](https://dev.to/raaynaldo/redux-toolkit-setup-tutorial-5fjf)  
-[RTK Query Quick Start](https://redux-toolkit.js.org/tutorials/rtk-query)  
-[Redux Configuring Your Store](https://redux.js.org/usage/configuring-your-store)  
-[Clear Redux Toolkit State using Redux-Persist](https://bionicjulia.com/blog/clear-redux-toolkit-state-with-redux-persist-and-typescript)  
-[Use Redux Persist in React Native](https://blog.logrocket.com/use-redux-persist-react-native/)  
-[useSelector and useDispatch React-Redux Hooks](https://builtin.com/software-engineering-perspectives/useselector-usedispatch-react-redux)  
+This is a simple e-commerce application that fetches data from an API and displays it on the page.
 
+The user can add and remove items from the cart, and the cart is saved in local storage. The user can also view the
+details of each item.
 
+## Built With
 
-**Videos:**  
-[Custom React Hooks](https://www.youtube.com/watch?v=0c6znExIqRw&list=PLZlA0Gpn_vH-aEDXnaFNLsqiJWFpIWV03)  
-[Custom React Hooks 2](https://www.youtube.com/watch?v=vrIxu-kfAUo)  
-[React Query](https://www.youtube.com/watch?v=lVLz_ASqAio)  
-[useEffect in 13 minutes](https://www.youtube.com/watch?v=0ZJgIjIuY7U)  
-[Shopping Cart with React and TypeScript](https://www.youtube.com/watch?v=lATafp15HWA)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [TypeScript](https://www.typescriptlang.org/)
+- [tsx](https://www.typescriptlang.org/docs/handbook/jsx.html)
+- [React.js](https://reactjs.org/)
+- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Bootstrap](https://getbootstrap.com)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
+- [Yup](https://www.npmjs.com/package/yup)
+- [Git](https://training.github.com/downloads/github-git-cheat-sheet/)
+- [GitHub](https://github.com/about)
+- [Formik](https://formik.org/)
+- [Vite](https://vitejs.dev/)
+- [Netlify](https://www.netlify.com/)
+- [PhpStorm](https://www.jetbrains.com/phpstorm/)
+- [Noroff API _Online Shop_ Endpoints](https://api.noroff.dev/api/v1/online-shop)
 
-**Practical Examples:**  
-[Redux Toolkit Cart Demo](https://codesandbox.io/embed/redux-toolkit-cart-demo-forked-fkb5d?codemirror=1)  
+## Getting Started
 
+### Installing
 
----
+1. Clone the repo:
 
-### Goal
-To apply knowledge of React to build an eCom store.
+```bash
+git clone git@github.com:siljeangelvik/react-ts-shopping-cart.git
+```
 
-### Brief
-The API you are using for this brief is:   
-https://api.noroff.dev/api/v1/online-shop
+2. Install the dependencies:
 
-You can find individual items by appending a product ID at the end of the API URL e.g.   
-https://api.noroff.dev/api/v1/online-shop/f99cafd2-bd40-4694-8b33-a6052f36b435
+```
+npm install
+```
 
-You are tasked with build out the following pages for an eCom store:
-* Homepage 
-* Individual product page 
-* Cart page 
-* Checkout success page
+### Running
 
-~~The Homepage should have a list of all the products.   
-There should be a look-ahead search bar that filters products when typing in a product name.   
-Clicking on a product should take a user to an individual product page.~~
+To run the app in development mode:
 
-~~Your pages should use a <Layout> component that contains a header and footer.   
-The header should contain a nav bar as well as a Cart icon component that   
-acts as a button as well as displays the current number of items in the cart.~~
+```bash
+npm run dev
+```
 
-~~The individual product page should display data for a single product.~~   
-~~There should be an `Add to cart` button which, upon clicking, adds the product to the cart.~~   
-~~The product page should display the title of the product, the description and the image.~~   
-~~There should also be reviews listed for the product, if there are any.~~   
+To build the app:
 
-~~You should use the `discountedPrice` property to display the price of the product.~~   
-~~If there is a difference between the `discountedPrice` and `price` properties then that means   
-there is a discount for that product. Calculate what this discount is and display it on the page.~~
+```bash
+npm run build
+```
 
-~~Clicking on the Cart icon will load the Cart page,   
-which will list all of the products as well as a total.~~   
-~~The Cart page will have a Checkout button.~~   
-~~Clicking this Checkout button then goes to a Checkout success page.~~
+To preview the app:
 
-~~The Checkout success page will display a message to the user notifying them that their order was successful.~~   
-~~There should also be a link that lets a user go back to the store.~~   
-~~The cart must be cleared if the user gets to the Checkout success page.~~
+```bash
+npm run preview
+```
 
-~~There will be a contact page which will   
-contain a contact form with the following fields.   
-There must be form validation:~~
-* Full name (Minimum number of characters is 3, required)  
-* Subject (Minimum number of characters is 3, required)
-* Email (Must be a valid email address, required)
-* Body (Minimum number of characters is 3, required)
+## Contributing
 
-~~You will be using React Router to switch between pages.~~
+No contributions at this time.
 
-~~Your design should be responsive. You are welcome to use a CSS Framework, however,   
-you’re encouraged to design from scratch and use styled-components or CSS Modules.~~
+## Contact
 
-You are not required to use TypeScript.
+Click on the badges below to go to my profiles or contact me via email.
 
-~~Your code is expected to be clean and well-formatted.~~
+<a href = "https://www.linkedin.com/in/siljeangelvik/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="LinkedIn Badge" />
+</a>
+<a href = "https://github.com/siljeangelvik">
+    <img src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub Badge" />
+</a>
+<a href = "mailto: angelviksilje@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335.svg?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail Badge" />
+</a>
 
-### Process
-~~Create a new CRA app.~~
+## Acknowledgments
 
-~~Create a Header that has a Nav.~~ 
+### Resources
 
-~~Create a Cart Icon component and position this next to your Nav. This Cart Icon component will have an overlay that displays the number of items in the cart.~~ 
+Not all resources have been used, but I have included them here for future reference.
 
-~~Create a Footer component.~~ 
-
-~~Create a Layout component that has your Header and Footer.~~
- 
-
-Create the other pages:
- 
-6.1 ~~ContactPage~~  
-6.2 ~~ProductPage~~  
-6.3 ~~CheckoutPage~~  
-6.4 ~~CheckoutSuccessPage~~  
- 
-~~Add React Router and route to each of the pages.~~    
-The ProductPage page will be using a dynamic segment.   
-~~Fetch the list of products on the Homepage and store this as a state.~~   
-~~On the homepage, loop through the products and display a Product component for each of the values.~~   
-~~This Product component should look like a product card.~~   
-~~Each Product component will have a View product button which will link to the ProductPage page.~~ 
-
-The homepage should have a lookahead/auto-complete Search bar component.   
-~~Typing values in the search bar should display products where the title matches the search input.~~   
-~~Clicking on an item should take the user to the ProductPage page.~~   
-~~Tip: Filter the user input and then display products that match the input.~~ 
-
-~~On the ProductPage, use the ID of the product as the params for the dynamic segment.~~   
-~~Add the product details as mentioned in the brief.~~ 
-~~Create a cart state.~~   
-~~When the Add to cart button on the ProductPage is clicked, add the product to the cart.~~ 
-~~Clicking on the Cart Icon component will take the user to the CheckoutPage page.~~ 
-
-~~The CheckoutPage must list all of the products in the cart, show a total at the bottom and a Checkout button.~~ 
-~~Clicking the Checkout button will take the user to the CheckoutSuccessPage.~~ 
-
-~~The CheckoutSuccessPage should display that the order was successful and clear the cart.~~   
-~~There should be a link to go back to the store.~~
- 
-~~On the ContactPage, create the following inputs with the following requirements.~~
- 
-16.1 ~~Full name (Minimum number of characters is 3, required)~~  
-16.2 ~~Subject (Minimum number of characters is 3, required)~~  
-16.3 ~~Email (Must be a valid email address, required)~~  
-16.4 ~~Body (Minimum number of characters is 3, required)~~  
-16.5 ~~Submit button~~   
-~~console.log the data from the form once validation requirements are met.~~ 
-
-Once your project is done, deploy it to Netlify.
-
-
-### Delivery 
-~~Deploy your website on Netlify.~~
-
-Please submit your public GitHub repository URL and the URL for your Netlify live site.
-
-~~Please make sure to exclude node_modules by using a .gitignore file.~~
-
+> #### Docs
+> - [Tanstack](https://tanstack.com/query/v4/docs/react/quick-start)
+> - [Redux Toolkit Setup Tutorial](https://dev.to/raaynaldo/redux-toolkit-setup-tutorial-5fjf)
+> - [RTK Query Quick Start](https://redux-toolkit.js.org/tutorials/rtk-query)
+> - [Redux Configuring Your Store](https://redux.js.org/usage/configuring-your-store)
+> - [Clear Redux Toolkit State using Redux-Persist](https://bionicjulia.com/blog/clear-redux-toolkit-state-with-redux-persist-and-typescript)
+> - [Use Redux Persist in React Native](https://blog.logrocket.com/use-redux-persist-react-native/)
+> - [useSelector and useDispatch React-Redux Hooks](https://builtin.com/software-engineering-perspectives/useselector-usedispatch-react-redux)
+> #### Videos and Tools
+> - [Custom React Hooks](https://www.youtube.com/watch?v=0c6znExIqRw&list=PLZlA0Gpn_vH-aEDXnaFNLsqiJWFpIWV03)
+> - [Custom React Hooks 2](https://www.youtube.com/watch?v=vrIxu-kfAUo)
+> - [React Query](https://www.youtube.com/watch?v=lVLz_ASqAio)
+> - [useEffect in 13 minutes](https://www.youtube.com/watch?v=0ZJgIjIuY7U)
+> - [Shopping Cart with React and TypeScript](https://www.youtube.com/watch?v=lATafp15HWA)
+> - [Redux Toolkit Cart Demo](https://codesandbox.io/embed/redux-toolkit-cart-demo-forked-fkb5d?codemirror=1)
