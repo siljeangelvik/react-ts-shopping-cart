@@ -1,5 +1,7 @@
 # JavaScript Frameworks CA
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/835b1911-33f1-493f-94a9-8e5e7de8cf1d/deploy-status)](https://app.netlify.com/sites/react-ts-ecom-cart/deploys)
+
 **Student:** [Silje Angelvik](https://github.com/siljeangelvik)    
 **Host:** [Netlify](https://react-ts-ecom-cart.netlify.app/)   
 **Repository:** [GitHub](https://github.com/siljeangelvik/react-ts-shopping-cart)
